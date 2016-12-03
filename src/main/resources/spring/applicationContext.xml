@@ -20,7 +20,7 @@
             ">
             
    <import resource="classpath:cxf/spring-cxf.xml"/>
-   
+    
    <!-- 注解自动扫描 -->
    <context:annotation-config />
    
