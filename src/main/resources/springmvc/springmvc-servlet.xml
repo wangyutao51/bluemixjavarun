@@ -8,6 +8,7 @@
                 http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">  
                 
 	<context:component-scan base-package="com.wyt.test.action" />
+	<context:component-scan base-package="com.ibm" />
 	
     <!-- 定义Spring MVC 的模板文件 -->  
     <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">  

@@ -28,6 +28,24 @@
     <dependencies>
     
     <dependency>
+		<groupId>com.ibm.watson.developer_cloud</groupId>
+		<artifactId>language-translator</artifactId>
+		<version>3.5.1</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>com.ibm.watson.developer_cloud</groupId>
+		<artifactId>text-to-speech</artifactId>
+		<version>3.5.1</version>
+	</dependency>
+	
+	<dependency>
+	  <groupId>com.ibm.watson.developer_cloud</groupId>
+	  <artifactId>java-sdk</artifactId>
+	  <version>2.10.0</version>
+	</dependency>
+    
+    <dependency>
      	<groupId>org.springframework</groupId>  
         <artifactId>spring-core</artifactId>  
         <version>4.0.7.RELEASE</version>
