@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.ibm.watson.developer_cloud.text_to_speech.v1.TextToSpeech;
 import com.ibm.watson.developer_cloud.text_to_speech.v1.model.AudioFormat;
@@ -30,6 +31,16 @@ public class TextToSpeechController
 	// private static TextToSpeech speechService = new
 	// TextToSpeech("3f90d2c6-bc1a-4380-9cce-6a380579193b", "LAv07ainS3RH");
 
+	/**
+	 * 返回
+	 * @return
+	 */
+	@RequestMapping(value="show.do",method=RequestMethod.GET)
+	public String showView()
+	{
+		return "speech/speech";
+	}
+	
 	@RequestMapping("/export.do")
 	public void exportSpeech(String text, HttpServletResponse response)
 	{
