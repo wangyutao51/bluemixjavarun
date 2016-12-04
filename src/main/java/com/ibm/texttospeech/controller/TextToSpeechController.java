@@ -54,7 +54,11 @@ public class TextToSpeechController
 
 				if (StringUtils.isNotEmpty(text) && text.length() > 20)
 				{
-					text = text.substring(0, 20);
+					response.setHeader("Content-Disposition",
+							"attachment; filename=\"" + text.substring(0, 20) + ".wav" + "\"");
+				}
+				else
+				{
 					response.setHeader("Content-Disposition",
 							"attachment; filename=\"" + text + ".wav" + "\"");
 				}
