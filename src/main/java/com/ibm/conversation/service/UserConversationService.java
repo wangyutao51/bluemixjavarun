@@ -15,19 +15,22 @@ import com.ibm.watson.developer_cloud.conversation.v1.ConversationService;
 @Service
 public class UserConversationService
 {
-	private static ConversationService conversationService = null;
+	private final static String username = "390ce196-75f9-48ca-ac50-6de5dfb5181c";
+	
+	private final static String password = "kBahYbkUQIAD";
+	
+	private static ConversationService conversationService = new ConversationService(ConversationService.VERSION_DATE_2016_07_11, username, password);
 
 	private UserConversationService()
 	{
 
 	}
 
-	public static synchronized ConversationService newConversationService(
-			String versionDate, String userName, String passWd)
+	public static synchronized ConversationService newConversationService()
 	{
 		if (null == conversationService)
 		{
-			conversationService = new ConversationService(versionDate, userName, passWd);
+			conversationService = new ConversationService(ConversationService.VERSION_DATE_2016_07_11, username, password);
 		}
 		return conversationService;
 	}
