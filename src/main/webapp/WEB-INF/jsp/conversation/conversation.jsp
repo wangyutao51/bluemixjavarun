@@ -39,7 +39,7 @@
 			<input type="hidden" value="WORKFORCE PREDICTION" class="_external--button--blue"> &nbsp;
 			<input type="hidden" value="DEMOGRAPHICS @WORKPLACE" class="_external--button--blue"> &nbsp;
 			<input type="hidden" value="RECRUITMENT ASSISTANCE" class="_external--button--blue">
-			<input type="text" value="${username}" id="username" name="username">
+			<input type="hidden" value="${username}" id="username" name="username">
 		</div>
 		<p style="color: #004E71; font-weight: 800; font-size: 18px">Speak to our Watson Workforce Engagement Advisor</p>
 		<div class="data--info_confidence"></div> 

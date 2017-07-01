@@ -20,9 +20,8 @@
 
 // conversation variables
 var conversation_id, client_id,contextid,username;
-console.log('username='+$("#username").val());
-
-alert('username='+username);
+console.log('usernamelog='+$("#username").val());
+username = $("#username").val();
 
 var inputHistory = [];
 var inputHistoryPointer = -1
@@ -107,8 +106,6 @@ $.post('mainflow.do', params)//dialog
 			dialog = result;
 		}
 	  
-    username = $("#username").val();
-    alert('usernam='+username);
 	$chatInput.val(''); // clear the text input
 	var response =  dialog;
 	if(dialog.conversation)
