@@ -19,8 +19,10 @@
 'use strict';
 
 // conversation variables
-var conversation_id, client_id,contextid;
-console.log('123');
+var conversation_id, client_id,contextid,username;
+console.log('username='+$("#username").val());
+
+alert('username='+username);
 
 var inputHistory = [];
 var inputHistoryPointer = -1
@@ -79,7 +81,7 @@ if (typeof(userText) !== undefined && $.trim(userText) !== '')
   submitMessage(userText);
 
 // build the conversation parameters
-var params = { input : userText,contextid : contextid };
+var params = { input : userText,contextid : contextid,username : username};
 
 // check if there is a conversation in place and continue that
 // by specifing the conversation_id and client_id
@@ -105,7 +107,8 @@ $.post('mainflow.do', params)//dialog
 			dialog = result;
 		}
 	  
-	  
+    username = $("#username").val();
+    alert('usernam='+username);
 	$chatInput.val(''); // clear the text input
 	var response =  dialog;
 	if(dialog.conversation)
